@@ -1,0 +1,1121 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="Programa ARCA — Apoio, Resgate, Cuidado e Adoção Animal. Prefeitura Municipal da Serra - ES." />
+  <title>Programa ARCA — Prefeitura da Serra</title>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet" />
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css" rel="stylesheet" />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet" />
+  <link href="style.css" rel="stylesheet" />
+  <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@400;500;600;700;800&family=Inter:wght@400;500;600&display=swap" rel="stylesheet" />
+</head>
+<body>
+
+<a href="#conteudo-principal" class="skip-link">Ir para o conteúdo principal</a>
+
+<!-- ================================================
+     SITE PÚBLICO
+     ================================================ -->
+<div id="site-publico">
+
+  <!-- NAVBAR -->
+  <nav class="navbar navbar-expand-lg navbar-light fixed-top navbar-arca" role="navigation" aria-label="Navegação principal">
+  <div class="container">
+    <a class="navbar-brand d-flex align-items-center gap-2" href="#inicio">
+      <img src="img/logo prefeitura da serra.png" alt="Prefeitura Municipal da Serra" height="36">
+    </a>
+    <button class="navbar-toggler border-0" type="button" data-bs-toggle="collapse"
+            data-bs-target="#navbarMain" aria-controls="navbarMain" aria-expanded="false" aria-label="Abrir menu">
+      <i class="bi bi-list fs-4"></i>
+    </button>
+    <div class="collapse navbar-collapse" id="navbarMain">
+      <ul class="navbar-nav mx-auto gap-1" role="menubar">
+        <li class="nav-item"><a class="nav-link" href="#inicio">Início</a></li>
+        <li class="nav-item"><a class="nav-link" href="#quem-somos">Quem somos?</a></li>
+        <li class="nav-item"><a class="nav-link" href="#servicos">Serviços</a></li>
+        <li class="nav-item"><a class="nav-link" href="#contato">Contato</a></li>
+      </ul>
+      <div class="d-flex align-items-center gap-2 mt-3 mt-lg-0 flex-wrap">
+        <button class="btn btn-outline-primary-arca" onclick="abrirModalLogin()" aria-label="Acessar minha conta">Entrar</button>
+        <button class="btn btn-primary-arca" onclick="abrirModalCadastro()">Cadastrar-se</button>
+        <div class="dropdown">
+          <button class="btn-acessibilidade dropdown-toggle" data-bs-toggle="dropdown"
+                  aria-label="Opções de acessibilidade" aria-haspopup="true">
+            <i class="bi bi-universal-access"></i>
+          </button>
+          <div class="dropdown-menu dropdown-menu-end dropdown-acessibilidade">
+            <button class="dropdown-item" onclick="toggleFonte()" id="item-fonte">
+              <i class="bi bi-type-bold me-2"></i><span id="label-fonte">Aumentar fonte</span>
+            </button>
+            <div class="dropdown-divider my-1"></div>
+            <button class="dropdown-item" onclick="toggleDarkMode()" id="item-tema">
+              <i class="bi bi-moon me-2" id="icone-tema"></i><span id="label-tema">Modo escuro</span>
+            </button>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</nav>
+
+  <!-- HERO -->
+  <section id="inicio" class="hero-section" aria-labelledby="hero-titulo">
+  <div class="container" id="conteudo-principal" tabindex="-1">
+    <div class="row align-items-center g-5">
+      <div class="col-lg-6 reveal">
+        <span class="eyebrow-tag">Prefeitura da Serra · ES</span>
+        <h1 id="hero-titulo" class="hero-title">RESGATE, CUIDADO E PROTEÇÃO ANIMAL NA SERRA</h1>
+        <p class="hero-subtitle">
+          O Programa ARCA oferece serviços gratuitos de castração, atendimento veterinário,
+          adoção responsável e resgate animal para moradores de Serra — ES.
+        </p>
+        <div class="hero-ctas">
+          <a href="#servicos" class="btn btn-primary-arca btn-lg">
+            <i class="bi bi-grid"></i>Conhecer Serviços
+          </a>
+          <button onclick="abrirModalCadastro()" class="btn btn-outline-primary-arca btn-lg">
+            Cadastrar-se <i class="bi bi-arrow-right"></i>
+          </button>
+        </div>
+      </div>
+      <div class="col-lg-6 reveal">
+        <img src="img/programa arca cão e gato.png"
+             alt="Cão e gato felizes representando o Programa ARCA da Prefeitura da Serra"
+             class="img-fluid"
+             style="width:100%;height:420px;object-fit:cover;background:#dce8f5;border-radius:16px;">
+      </div>
+    </div>
+  </div>
+</section>
+
+  <!-- QUEM SOMOS -->
+  <section id="quem-somos" class="section-padded" style="background:#fff;" aria-labelledby="qs-titulo">
+  <div class="container">
+    <div class="row align-items-center g-5">
+      <div class="col-lg-5 reveal">
+        <span class="section-label">Sobre o Programa</span>
+        <h2 id="qs-titulo" class="section-title">Quem somos?</h2>
+        <p class="texto-corpo mt-3">
+          O Programa ARCA, desenvolvido pela Prefeitura da Serra, é uma iniciativa voltada à proteção,
+          cuidado e bem-estar animal no município. Atuando de forma responsável e contínua, o programa
+          promove ações de resgate, atendimento veterinário, castração e vacinação.
+        </p>
+        <p class="texto-corpo mt-2">
+          Trabalhamos na prevenção do abandono, no controle populacional e na conscientização da
+          população sobre a guarda responsável, contribuindo para uma cidade mais equilibrada e
+          sustentável para todos.
+        </p>
+        <div class="stats-inline">
+          <div class="stat-inline-item">
+            <div class="stat-inline-numero">3.000+</div>
+            <div class="stat-inline-label">Animais atendidos</div>
+          </div>
+          <div class="stat-inline-item">
+            <div class="stat-inline-numero">100%</div>
+            <div class="stat-inline-label">100% gratuito</div>
+          </div>
+          <div class="stat-inline-item">
+            <div class="stat-inline-numero">Serra</div>
+            <div class="stat-inline-label">Espírito Santo</div>
+          </div>
+        </div>
+      </div>
+      <div class="col-lg-1 d-none d-lg-block"></div>
+      <div class="col-lg-6 reveal">
+        <img src="img/equipe medica.jpg"
+             alt="Equipe veterinária do Programa ARCA realizando atendimento em Serra ES"
+             class="img-fluid"
+             style="width:100%;height:440px;object-fit:cover;background:#dce8f5;border-radius:16px;">
+      </div>
+    </div>
+  </div>
+</section>
+
+  <!-- SERVIÇOS -->
+  <section id="servicos" class="section-padded" style="background:var(--bg-suave);" aria-labelledby="serv-titulo">
+  <div class="container">
+    <div class="row">
+      <div class="col-lg-8 reveal">
+        <span class="section-label">Serviços</span>
+        <h2 id="serv-titulo" class="section-title">O que o ARCA oferece</h2>
+        <p class="texto-corpo mt-2" style="max-width:52ch;">
+          Todos os serviços são gratuitos para moradores do município de Serra — ES.
+        </p>
+      </div>
+    </div>
+    <div class="servicos-lista">
+      <div class="servico-item reveal">
+        <span class="servico-numero">01</span>
+        <div class="servico-divider"></div>
+        <div class="servico-conteudo">
+          <div class="servico-titulo-item">Castração de Cães e Gatos</div>
+          <div class="servico-desc-item">Esterilização gratuita para animais de moradores de Serra. Controle populacional responsável e humanizado.</div>
+          <a href="#" class="servico-link" onclick="abrirModalCadastro();return false;">Saiba mais <i class="bi bi-arrow-right"></i></a>
+        </div>
+        <img src="img/Castracao-animais.jpeg" alt="Castração" class="servico-foto">
+      </div>
+      <div class="servico-item reveal">
+        <span class="servico-numero">02</span>
+        <div class="servico-divider"></div>
+        <div class="servico-conteudo">
+          <div class="servico-titulo-item">Atendimento Veterinário</div>
+          <div class="servico-desc-item">Cuidados médicos, vacinação e acompanhamento completo para seu animal de estimação.</div>
+          <a href="#" class="servico-link" onclick="abrirModalCadastro();return false;">Saiba mais <i class="bi bi-arrow-right"></i></a>
+        </div>
+        <img src="img/atendimento veterinario.webp" alt="Atendimento Veterinário" class="servico-foto">
+      </div>
+      <div class="servico-item reveal">
+        <span class="servico-numero">03</span>
+        <div class="servico-divider"></div>
+        <div class="servico-conteudo">
+          <div class="servico-titulo-item">Adoção Responsável</div>
+          <div class="servico-desc-item">Conectamos animais resgatados a novos lares amorosos. Processo simples, transparente e seguro.</div>
+          <a href="#" class="servico-link" onclick="abrirModalCadastro();return false;">Saiba mais <i class="bi bi-arrow-right"></i></a>
+        </div>
+        <img src="img/adoção.jpg" alt="Adoção Responsável" class="servico-foto">
+      </div>
+      <div class="servico-item reveal">
+        <span class="servico-numero">04</span>
+        <div class="servico-divider"></div>
+        <div class="servico-conteudo">
+          <div class="servico-titulo-item">Resgate Animal</div>
+          <div class="servico-desc-item">Atuamos no resgate de animais em situação de risco, maus-tratos ou abandono em Serra.</div>
+          <a href="#" class="servico-link" onclick="abrirModalCadastro();return false;">Saiba mais <i class="bi bi-arrow-right"></i></a>
+        </div>
+        <img src="img/resgate animal.jpg" alt="Resgate Animal" class="servico-foto">
+      </div>
+    </div>
+  </div>
+</section>
+
+  <!-- CONTATO -->
+  <section id="contato" class="section-padded" style="background:#fff;" aria-labelledby="cont-titulo">
+  <div class="container">
+    <div class="row align-items-start g-5">
+      <div class="col-lg-5 reveal">
+        <span class="section-label">Fale conosco</span>
+        <h2 id="cont-titulo" class="section-title">Entre em contato</h2>
+        <div class="contato-lista mt-4">
+          <div class="contato-linha">
+            <i class="bi bi-telephone-fill contato-linha-icon"></i>
+            <div>
+              <div class="contato-linha-titulo">Telefone</div>
+              <div class="contato-linha-texto">(27) 3291-2900</div>
+            </div>
+          </div>
+          <div class="contato-linha">
+            <i class="bi bi-envelope-fill contato-linha-icon"></i>
+            <div>
+              <div class="contato-linha-titulo">E-mail</div>
+              <div class="contato-linha-texto">arca@serra.es.gov.br</div>
+            </div>
+          </div>
+          <div class="contato-linha">
+            <i class="bi bi-clock-fill contato-linha-icon"></i>
+            <div>
+              <div class="contato-linha-titulo">Horário</div>
+              <div class="contato-linha-texto">Segunda a sexta, 8h às 17h</div>
+            </div>
+          </div>
+          <div class="contato-linha">
+            <i class="bi bi-geo-alt-fill contato-linha-icon"></i>
+            <div>
+              <div class="contato-linha-titulo">Endereço</div>
+              <div class="contato-linha-texto">Centro de Zoonoses da Serra — ES</div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="col-lg-7 reveal">
+        <div style="padding-top:3.5rem;">
+          <div class="alerta-lei">
+            <i class="bi bi-shield-check me-2" style="color:var(--azul-primario)"></i>
+            <strong>Lei Sansão (14.064/20):</strong> Estabelece punição de 2 a 5 anos de prisão,
+            além de multa e perda da guarda, para quem cometer maus-tratos contra cães ou gatos.
+          </div>
+          <div class="mt-4">
+            <button onclick="abrirModalCadastro()" class="btn btn-primary-arca">
+              <i class="bi bi-person-plus"></i>Criar conta gratuita
+            </button>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+  <!-- FOOTER -->
+  <footer class="footer-arca" role="contentinfo">
+    <div class="container">
+      <div class="row g-4 footer-top pb-4">
+        <div class="col-lg-4">
+          <div class="d-flex align-items-center gap-2 mb-3">
+            <img src="img/logo prefeitura da serra.png" alt="Logo Prefeitura Municipal da Serra - ES" class="logo-serra logo-serra-footer">
+          </div>
+          <p class="footer-descricao">
+            Prefeitura da Serra, compromisso diário com o bem-estar, a proteção e o desenvolvimento
+            de uma cidade mais para todos.
+          </p>
+        </div>
+        <div class="col-lg-2 col-6">
+          <h5 class="footer-col-titulo">Menu</h5>
+          <ul class="footer-links">
+            <li><a href="#inicio">Início</a></li>
+            <li><a href="#quem-somos">Quem somos?</a></li>
+            <li><a href="#servicos">Serviços</a></li>
+            <li><a href="#contato">Contato</a></li>
+          </ul>
+        </div>
+        <div class="col-lg-3 col-6">
+          <h5 class="footer-col-titulo">Serviços</h5>
+          <ul class="footer-links">
+            <li><a href="#" onclick="abrirModalCadastro();return false;">Cadastro para adoção</a></li>
+            <li><a href="#" onclick="abrirModalCadastro();return false;">Solicitação de resgate</a></li>
+            <li><a href="#" onclick="abrirModalCadastro();return false;">Denúncia de maus-tratos</a></li>
+            <li><a href="#" onclick="abrirModalCadastro();return false;">Agendamento de castração</a></li>
+          </ul>
+        </div>
+        <div class="col-lg-3">
+          <h5 class="footer-col-titulo">Redes Sociais</h5>
+          <div class="d-flex gap-3 mt-2">
+            <a href="#" class="social-link" aria-label="Facebook do Programa ARCA"><i class="bi bi-facebook"></i></a>
+            <a href="#" class="social-link" aria-label="Instagram do Programa ARCA"><i class="bi bi-instagram"></i></a>
+          </div>
+        </div>
+      </div>
+      <div class="footer-bottom pt-4">
+        <p class="mb-0">© 2026 Prefeitura da Serra — Programa ARCA. Todos os direitos reservados.</p>
+      </div>
+    </div>
+  </footer>
+</div><!-- /site-publico -->
+
+
+<!-- ================================================
+     MODAL LOGIN
+     ================================================ -->
+<div class="modal fade" id="modalLogin" tabindex="-1" aria-labelledby="lblLogin" aria-modal="true" role="dialog">
+  <div class="modal-dialog modal-dialog-centered">
+    <div class="modal-content modal-arca">
+      <div class="modal-body p-4 p-md-5">
+        <div class="text-center mb-4">
+          <img src="img/logo prefeitura da serra.png" alt="Logo Prefeitura da Serra" class="logo-serra logo-serra-modal">
+          <h4 id="lblLogin" class="modal-titulo mt-3">Acesse sua conta</h4>
+          <p class="modal-subtitulo">Programa ARCA — Prefeitura da Serra</p>
+        </div>
+        <form id="form-login" novalidate>
+          <div class="mb-3">
+            <label for="login-cpf-email" class="form-label-arca">CPF ou E-mail</label>
+            <div class="input-group-arca">
+              <i class="bi bi-person input-icon"></i>
+              <input type="text" class="input-arca" id="login-cpf-email"
+                     placeholder="000.000.000-00 ou email@email.com" autocomplete="username" required>
+            </div>
+            <div class="campo-erro" id="erro-login-id"></div>
+          </div>
+          <div class="mb-3">
+            <label for="login-senha" class="form-label-arca">Senha</label>
+            <div class="input-group-arca">
+              <i class="bi bi-lock input-icon"></i>
+              <input type="password" class="input-arca" id="login-senha"
+                     placeholder="Sua senha" autocomplete="current-password" required>
+              <button type="button" class="btn-toggle-senha" onclick="toggleSenha('login-senha',this)" aria-label="Mostrar/ocultar senha">
+                <i class="bi bi-eye"></i>
+              </button>
+            </div>
+            <div class="campo-erro" id="erro-login-senha"></div>
+          </div>
+          <div class="mb-3 d-flex align-items-center gap-2">
+            <input type="checkbox" class="form-check-input check-arca" id="login-lembrar">
+            <label for="login-lembrar" class="form-label-arca mb-0" style="cursor:pointer;">Lembrar-me</label>
+          </div>
+          <div class="alerta-erro mb-3" id="alerta-login-erro" style="display:none;">
+            <i class="bi bi-exclamation-circle me-2"></i>Senha ou CPF/E-mail estão incorretos.
+          </div>
+          <button type="submit" class="btn btn-primary-arca w-100 py-2 fs-6">
+            <i class="bi bi-box-arrow-in-right me-2"></i>Entrar
+          </button>
+        </form>
+        <div class="text-center mt-3">
+          <a href="#" class="link-arca small">Está com dificuldades? Precisa de ajuda?</a>
+        </div>
+        <div class="text-center mt-1">
+          <a href="#" class="link-arca small">Termos de Uso e Aviso de Privacidade</a>
+        </div>
+        <hr class="my-3">
+        <div class="text-center">
+          <span class="texto-claro small">Não tem conta?</span>
+          <button class="btn btn-link p-0 ms-1 link-arca small" onclick="fecharLoginAbrirCadastro()">Cadastre-se grátis</button>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+
+<!-- ================================================
+     MODAL CADASTRO
+     ================================================ -->
+<div class="modal fade" id="modalCadastro" tabindex="-1" aria-labelledby="lblCadastro" aria-modal="true" role="dialog">
+  <div class="modal-dialog modal-dialog-centered modal-lg modal-dialog-scrollable">
+    <div class="modal-content modal-arca">
+      <div class="modal-body p-4 p-md-5">
+        <div class="text-center mb-4">
+          <img src="img/logo prefeitura da serra.png" alt="Logo Prefeitura da Serra" class="logo-serra logo-serra-modal">
+          <h4 id="lblCadastro" class="modal-titulo mt-3">Cadastro de Usuário</h4>
+          <p class="modal-subtitulo">Preencha os campos abaixo para criar sua conta.</p>
+        </div>
+        <form id="form-cadastro" novalidate>
+          <div class="row g-3">
+            <div class="col-md-6">
+              <label for="cad-nome" class="form-label-arca">Nome completo <span class="text-danger">*</span></label>
+              <input type="text" class="input-arca" id="cad-nome" placeholder="Seu nome completo" required>
+              <div class="campo-erro" id="erro-cad-nome"></div>
+            </div>
+            <div class="col-md-6">
+              <label for="cad-cpf" class="form-label-arca">CPF <span class="text-danger">*</span></label>
+              <input type="text" class="input-arca" id="cad-cpf" placeholder="000.000.000-00" maxlength="14" required>
+              <div class="campo-erro" id="erro-cad-cpf"></div>
+            </div>
+            <div class="col-md-6">
+              <label for="cad-email" class="form-label-arca">E-mail <span class="text-danger">*</span></label>
+              <input type="email" class="input-arca" id="cad-email" placeholder="email@email.com" autocomplete="email" required>
+              <div class="campo-erro" id="erro-cad-email"></div>
+            </div>
+            <div class="col-md-6">
+              <label for="cad-nascimento" class="form-label-arca">Data de nascimento <span class="text-danger">*</span></label>
+              <input type="text" class="input-arca" id="cad-nascimento" placeholder="dd/mm/aaaa" maxlength="10" required>
+              <div class="campo-erro" id="erro-cad-nasc"></div>
+            </div>
+            <div class="col-md-6">
+              <label for="cad-senha" class="form-label-arca">Senha <span class="text-danger">*</span></label>
+              <div class="input-group-arca">
+                <i class="bi bi-lock input-icon"></i>
+                <input type="password" class="input-arca" id="cad-senha" placeholder="Mínimo 6 caracteres" autocomplete="new-password" required>
+                <button type="button" class="btn-toggle-senha" onclick="toggleSenha('cad-senha',this)" aria-label="Mostrar/ocultar senha">
+                  <i class="bi bi-eye"></i>
+                </button>
+              </div>
+              <div class="campo-erro" id="erro-cad-senha"></div>
+            </div>
+            <div class="col-md-6">
+              <label for="cad-cep" class="form-label-arca">CEP <span class="text-danger">*</span></label>
+              <input type="text" class="input-arca" id="cad-cep" placeholder="00000-000" maxlength="9" required>
+              <div class="campo-erro" id="erro-cad-cep"></div>
+            </div>
+            <div class="col-md-8">
+              <label for="cad-rua" class="form-label-arca">Rua / Endereço <span class="text-danger">*</span></label>
+              <input type="text" class="input-arca" id="cad-rua" placeholder="Nome da rua ou avenida" required>
+              <div class="campo-erro" id="erro-cad-rua"></div>
+            </div>
+            <div class="col-md-4">
+              <label for="cad-numero" class="form-label-arca">Número <span class="text-danger">*</span></label>
+              <input type="text" class="input-arca" id="cad-numero" placeholder="Ex: 123" required>
+            </div>
+            <div class="col-md-6">
+              <label for="cad-bairro" class="form-label-arca">Bairro <span class="text-danger">*</span></label>
+              <input type="text" class="input-arca" id="cad-bairro" placeholder="Seu bairro" required>
+            </div>
+            <div class="col-md-6">
+              <label for="cad-cidade" class="form-label-arca">Cidade</label>
+              <input type="text" class="input-arca" id="cad-cidade" value="Serra - ES" readonly style="background:#f5f5f5;cursor:not-allowed;">
+            </div>
+            <div class="col-12">
+              <label for="cad-complemento" class="form-label-arca">Complemento <span class="texto-claro">(opcional)</span></label>
+              <input type="text" class="input-arca" id="cad-complemento" placeholder="Apto, bloco, referência...">
+            </div>
+          </div>
+          <div class="alerta-erro mt-3" id="alerta-cad-erro" style="display:none;"></div>
+          <button type="submit" class="btn btn-primary-arca w-100 py-2 mt-4 fs-6">
+            <i class="bi bi-person-check me-2"></i>Criar conta
+          </button>
+        </form>
+        <div class="text-center mt-3">
+          <span class="texto-claro small">Já tem uma conta?</span>
+          <button class="btn btn-link p-0 ms-1 link-arca small" onclick="fecharCadastroAbrirLogin()">Faça login</button>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+
+<!-- ================================================
+     DASHBOARD
+     ================================================ -->
+<div id="dashboard" style="display:none;">
+
+  <!-- Offcanvas sidebar mobile -->
+  <div class="offcanvas offcanvas-start" tabindex="-1" id="sidebarOffcanvas" aria-labelledby="sidebarOffcanvasLabel" style="width:260px;">
+    <div class="offcanvas-header border-bottom pb-3">
+      <div class="d-flex align-items-center gap-2">
+        <img src="img/logo prefeitura da serra.png" alt="Logo Prefeitura da Serra" class="logo-serra logo-serra-sidebar">
+      </div>
+      <button type="button" class="btn-close" data-bs-dismiss="offcanvas" aria-label="Fechar menu"></button>
+    </div>
+    <div class="offcanvas-body p-0">
+      <nav class="sidebar-nav p-3">
+        <ul class="sidebar-menu">
+          <li><a href="#" class="sidebar-link" onclick="navegarDash('inicio',event)" data-pagina="inicio"><i class="bi bi-house"></i><span>Início</span></a></li>
+          <li><a href="#" class="sidebar-link" onclick="navegarDash('meus-animais',event)" data-pagina="meus-animais"><i class="bi bi-heart-pulse"></i><span>Meus Animais</span></a></li>
+          <li><a href="#" class="sidebar-link" onclick="navegarDash('cadastrar-animal',event)" data-pagina="cadastrar-animal"><i class="bi bi-plus-circle"></i><span>Cadastrar Animal</span></a></li>
+          <li><a href="#" class="sidebar-link" onclick="navegarDash('adocao',event)" data-pagina="adocao"><i class="bi bi-heart"></i><span>Adoção</span></a></li>
+          <li><a href="#" class="sidebar-link" onclick="navegarDash('veterinario',event)" data-pagina="veterinario"><i class="bi bi-bandaid"></i><span>Atendimento Veterinário</span></a></li>
+          <li><a href="#" class="sidebar-link" onclick="navegarDash('denuncias',event)" data-pagina="denuncias"><i class="bi bi-megaphone"></i><span>Canal de Denúncia</span></a></li>
+          <li><a href="#" class="sidebar-link" onclick="navegarDash('resgate',event)" data-pagina="resgate"><i class="bi bi-truck"></i><span>Solicitação de Resgate</span></a></li>
+          <li><a href="#" class="sidebar-link" onclick="navegarDash('historico',event)" data-pagina="historico"><i class="bi bi-clock-history"></i><span>Histórico</span></a></li>
+          <li><a href="#" class="sidebar-link" onclick="navegarDash('ajuda',event)" data-pagina="ajuda"><i class="bi bi-question-circle"></i><span>Ajuda</span></a></li>
+        </ul>
+      </nav>
+      <div class="sidebar-footer p-3 border-top mt-auto">
+        <a href="#" class="sidebar-link" onclick="navegarDash('perfil',event)" data-pagina="perfil"><i class="bi bi-gear"></i><span>Configurações</span></a>
+        <a href="#" class="sidebar-link sidebar-logout mt-1" onclick="fazerLogout(event)"><i class="bi bi-box-arrow-right"></i><span>Sair</span></a>
+      </div>
+    </div>
+  </div>
+
+  <div class="dashboard-layout">
+
+    <!-- SIDEBAR DESKTOP -->
+    <aside class="sidebar-desktop" role="complementary" aria-label="Menu lateral">
+      <div class="sidebar-header">
+        <img src="img/logo prefeitura da serra.png" alt="Logo Prefeitura da Serra" class="logo-serra logo-serra-sidebar">
+      </div>
+      <nav class="sidebar-nav" role="navigation" aria-label="Navegação do sistema">
+        <ul class="sidebar-menu">
+          <li><a href="#" class="sidebar-link" onclick="navegarDash('inicio',event)" data-pagina="inicio"><i class="bi bi-house"></i><span>Início</span></a></li>
+          <li><a href="#" class="sidebar-link" onclick="navegarDash('meus-animais',event)" data-pagina="meus-animais"><i class="bi bi-heart-pulse"></i><span>Meus Animais</span></a></li>
+          <li><a href="#" class="sidebar-link" onclick="navegarDash('cadastrar-animal',event)" data-pagina="cadastrar-animal"><i class="bi bi-plus-circle"></i><span>Cadastrar Animal</span></a></li>
+          <li><a href="#" class="sidebar-link" onclick="navegarDash('adocao',event)" data-pagina="adocao"><i class="bi bi-heart"></i><span>Adoção</span></a></li>
+          <li><a href="#" class="sidebar-link" onclick="navegarDash('veterinario',event)" data-pagina="veterinario"><i class="bi bi-bandaid"></i><span>Atendimento Veterinário</span></a></li>
+          <li><a href="#" class="sidebar-link" onclick="navegarDash('denuncias',event)" data-pagina="denuncias"><i class="bi bi-megaphone"></i><span>Canal de Denúncia</span></a></li>
+          <li><a href="#" class="sidebar-link" onclick="navegarDash('resgate',event)" data-pagina="resgate"><i class="bi bi-truck"></i><span>Solicitação de Resgate</span></a></li>
+          <li><a href="#" class="sidebar-link" onclick="navegarDash('historico',event)" data-pagina="historico"><i class="bi bi-clock-history"></i><span>Histórico</span></a></li>
+          <li><a href="#" class="sidebar-link" onclick="navegarDash('ajuda',event)" data-pagina="ajuda"><i class="bi bi-question-circle"></i><span>Ajuda</span></a></li>
+        </ul>
+      </nav>
+      <div class="sidebar-footer">
+        <a href="#" class="sidebar-link" onclick="navegarDash('perfil',event)" data-pagina="perfil"><i class="bi bi-gear"></i><span>Configurações</span></a>
+        <a href="#" class="sidebar-link sidebar-logout" onclick="fazerLogout(event)"><i class="bi bi-box-arrow-right"></i><span>Sair</span></a>
+      </div>
+    </aside>
+
+    <!-- ÁREA PRINCIPAL -->
+    <div class="dash-main">
+
+      <!-- TOPBAR -->
+      <header class="dash-topbar">
+        <div class="d-flex align-items-center gap-3">
+          <button class="btn btn-icon d-lg-none" type="button" data-bs-toggle="offcanvas"
+                  data-bs-target="#sidebarOffcanvas" aria-label="Abrir menu lateral">
+            <i class="bi bi-list fs-5"></i>
+          </button>
+          <nav aria-label="Localização">
+            <ol class="breadcrumb-arca mb-0">
+              <li>Programa ARCA</li>
+              <li id="breadcrumb-atual">Início</li>
+            </ol>
+          </nav>
+        </div>
+        <div class="d-flex align-items-center gap-3">
+          <span class="badge-admin" id="badge-admin" style="display:none;">ADMIN</span>
+          <div class="dropdown">
+            <button class="btn-acessibilidade dropdown-toggle" data-bs-toggle="dropdown"
+                    aria-label="Opções de acessibilidade" aria-haspopup="true">
+              <i class="bi bi-universal-access"></i>
+            </button>
+            <div class="dropdown-menu dropdown-menu-end dropdown-acessibilidade">
+              <button class="dropdown-item" onclick="toggleFonte()" id="item-fonte-dash">
+                <i class="bi bi-type-bold me-2"></i><span id="label-fonte-dash">Aumentar fonte</span>
+              </button>
+              <div class="dropdown-divider my-1"></div>
+              <button class="dropdown-item" onclick="toggleDarkMode()" id="item-tema-dash">
+                <i class="bi bi-moon me-2" id="icone-tema-dash"></i><span id="label-tema-dash">Modo escuro</span>
+              </button>
+            </div>
+          </div>
+          <div class="user-avatar-wrap" onclick="navegarDash('perfil')" style="cursor:pointer;" role="button" aria-label="Abrir perfil">
+            <div class="user-avatar" id="topbar-avatar">U</div>
+            <div class="d-none d-md-block">
+              <div class="user-nome" id="topbar-nome">Usuário</div>
+              <div class="user-cargo" id="topbar-cargo">Cidadão</div>
+            </div>
+          </div>
+        </div>
+      </header>
+
+      <!-- CONTEÚDO DAS PÁGINAS -->
+      <main id="dash-conteudo" role="main" tabindex="-1">
+
+        <!-- ===== INÍCIO ===== -->
+        <div class="dash-page" id="page-inicio" style="display:none;">
+
+  <!-- Saudação tipográfica sem banner colorido -->
+  <div class="dash-saudacao-wrap">
+    <h2 class="dash-saudacao-titulo" id="banner-saudacao">Bem-vindo!</h2>
+    <p class="dash-saudacao-sub">Programa ARCA · Prefeitura da Serra</p>
+  </div>
+
+  <!-- Stats inline horizontais — IDs mantidos para o JS -->
+  <div class="stats-dash-inline">
+    <div class="stat-dash-item">
+      <div class="stat-dash-numero-novo" id="stat-adocoes">0</div>
+      <div class="stat-dash-label-novo">Adoções</div>
+    </div>
+    <div class="stat-dash-item">
+      <div class="stat-dash-numero-novo" id="stat-resgates">0</div>
+      <div class="stat-dash-label-novo">Resgates</div>
+    </div>
+    <div class="stat-dash-item">
+      <div class="stat-dash-numero-novo" id="stat-denuncias">0</div>
+      <div class="stat-dash-label-novo">Denúncias</div>
+    </div>
+    <div class="stat-dash-item">
+      <div class="stat-dash-numero-novo" id="stat-meus-animais">0</div>
+      <div class="stat-dash-label-novo">Meus Animais</div>
+    </div>
+  </div>
+
+  <!-- Acesso rápido -->
+  <p class="secao-titulo mb-3">Acesso Rápido</p>
+  <div class="row g-3">
+    <div class="col-6 col-md-4"><button class="acesso-rapido-btn w-100" onclick="navegarDash('meus-animais')"><i class="bi bi-heart-pulse"></i><span>Meus Animais</span></button></div>
+    <div class="col-6 col-md-4"><button class="acesso-rapido-btn w-100" onclick="navegarDash('cadastrar-animal')"><i class="bi bi-plus-circle"></i><span>Cadastrar Animal</span></button></div>
+    <div class="col-6 col-md-4"><button class="acesso-rapido-btn w-100" onclick="navegarDash('adocao')"><i class="bi bi-heart"></i><span>Adoção</span></button></div>
+    <div class="col-6 col-md-4"><button class="acesso-rapido-btn w-100" onclick="navegarDash('veterinario')"><i class="bi bi-bandaid"></i><span>Veterinário</span></button></div>
+    <div class="col-6 col-md-4"><button class="acesso-rapido-btn w-100" onclick="navegarDash('denuncias')"><i class="bi bi-megaphone"></i><span>Denúncia</span></button></div>
+    <div class="col-6 col-md-4"><button class="acesso-rapido-btn w-100" onclick="navegarDash('resgate')"><i class="bi bi-truck"></i><span>Resgate</span></button></div>
+  </div>
+
+  <!-- Atividade recente -->
+  <p class="secao-titulo mt-4 mb-3">Atividade Recente</p>
+  <div id="lista-atividade-recente">
+    <div class="estado-vazio">
+      <i class="bi bi-inbox estado-vazio-icon"></i>
+      <p>Nenhuma atividade registrada ainda.</p>
+    </div>
+  </div>
+
+</div>
+
+        <!-- ===== MEUS ANIMAIS ===== -->
+        <div class="dash-page" id="page-meus-animais" style="display:none;">
+          <div class="page-header">
+            <div>
+              <h2 class="page-titulo">Meus Animais</h2>
+              <p class="page-sub">Gerencie os animais cadastrados em sua conta.</p>
+            </div>
+            <button class="btn btn-primary-arca" onclick="navegarDash('cadastrar-animal')">
+              <i class="bi bi-plus-circle me-2"></i>Cadastrar novo
+            </button>
+          </div>
+          <div class="alerta-amarelo mb-4">
+            <i class="bi bi-exclamation-triangle me-2"></i>
+            Animais com status <strong>Cadastrado</strong> não aparecem na lista de adoção. Aguarde análise da equipe ARCA.
+          </div>
+          <div id="grid-meus-animais" class="row g-3"></div>
+        </div>
+
+        <!-- ===== CADASTRAR ANIMAL ===== -->
+        <div class="dash-page" id="page-cadastrar-animal" style="display:none;">
+          <div class="page-header">
+            <div>
+              <h2 class="page-titulo">Cadastrar Animal</h2>
+              <p class="page-sub">Informe os dados do animal para cadastrá-lo no sistema.</p>
+            </div>
+          </div>
+          <div class="card-arca p-4" style="max-width:580px;" id="form-cadastro-animal-wrap">
+            <form id="form-cadastro-animal" novalidate>
+              <div class="mb-3">
+                <label for="animal-especie" class="form-label-arca">Espécie <span class="text-danger">*</span></label>
+                <select class="input-arca" id="animal-especie" required>
+                  <option value="">Selecione</option>
+                  <option value="Cachorro">Cachorro</option>
+                  <option value="Gato">Gato</option>
+                  <option value="Outro">Outro</option>
+                </select>
+                <div class="campo-erro" id="erro-animal-especie"></div>
+              </div>
+              <div class="mb-3">
+                <label for="animal-raca" class="form-label-arca">Raça <span class="text-danger">*</span></label>
+                <input type="text" class="input-arca" id="animal-raca" placeholder="Ex: Labrador, SRD, Persa..." required>
+                <div class="campo-erro" id="erro-animal-raca"></div>
+              </div>
+              <div class="mb-3">
+                <label for="animal-descricao" class="form-label-arca">Descrição</label>
+                <textarea class="input-arca" id="animal-descricao" rows="3" placeholder="Comportamento, cor, tamanho..."></textarea>
+              </div>
+              <button type="submit" class="btn btn-primary-arca w-100 py-2">
+                <i class="bi bi-plus-circle me-2"></i>Cadastrar Animal
+              </button>
+            </form>
+          </div>
+          <div id="cadastro-animal-sucesso" class="text-center p-5" style="display:none;">
+            <div class="sucesso-icon"><i class="bi bi-check-circle-fill"></i></div>
+            <h3 class="mt-3">Animal Cadastrado!</h3>
+            <div class="id-gerado mt-2" id="id-animal-gerado">#000</div>
+            <p class="texto-medio mt-2">Cadastro realizado. Nossa equipe entrará em contato em breve.</p>
+            <button class="btn btn-primary-arca mt-3" onclick="resetCadastroAnimal()">
+              <i class="bi bi-plus-circle me-2"></i>Cadastrar outro
+            </button>
+          </div>
+        </div>
+
+        <!-- ===== ADOÇÃO ===== -->
+        <div class="dash-page" id="page-adocao" style="display:none;">
+          <div class="page-header">
+            <div>
+              <h2 class="page-titulo">Adoção de Animais</h2>
+              <p class="page-sub">Encontre seu novo companheiro e dê um lar para quem precisa.</p>
+            </div>
+          </div>
+          <div class="d-flex flex-wrap gap-2 mb-4 align-items-center">
+            <input type="text" class="input-arca" id="busca-adocao" placeholder="Buscar por nome ou raça..."
+                   style="max-width:300px;" oninput="filtrarAdocao()">
+            <button class="btn-filtro active" data-filtro="todos" onclick="filtrarEspecie('todos',this)">Todos</button>
+            <button class="btn-filtro" data-filtro="Cachorro" onclick="filtrarEspecie('Cachorro',this)">
+              <i class="bi bi-heart-pulse me-1"></i>Cães
+            </button>
+            <button class="btn-filtro" data-filtro="Gato" onclick="filtrarEspecie('Gato',this)">
+              <i class="bi bi-heart me-1"></i>Gatos
+            </button>
+          </div>
+          <div id="grid-adocao" class="row g-3"></div>
+        </div>
+
+        <!-- ===== VETERINÁRIO ===== -->
+        <div class="dash-page" id="page-veterinario" style="display:none;">
+          <div class="page-header">
+            <div>
+              <h2 class="page-titulo">Atendimento Veterinário</h2>
+              <p class="page-sub">Agende serviços veterinários gratuitos para seu animal.</p>
+            </div>
+          </div>
+          <div class="alerta-info mb-4">
+            <i class="bi bi-geo-alt me-2"></i>
+            <strong>Centro de Zoonoses da Serra</strong> · Segunda a sexta, 8h às 17h · <strong>(27) 3291-2900</strong>
+          </div>
+          <div class="row g-4 mb-4" id="grid-servicos-vet">
+            <div class="col-md-6">
+              <div class="servico-vet-card" style="--cor-topo:#025920">
+                <div class="servico-vet-topo"></div>
+                <div class="servico-vet-body">
+                  <i class="bi bi-scissors servico-vet-icon"></i>
+                  <h4>Castração</h4>
+                  <p>Esterilização gratuita para cães e gatos.</p>
+                  <button class="btn btn-primary-arca mt-2 w-100" onclick="abrirAgendamento('Castração')">Agendar</button>
+                </div>
+              </div>
+            </div>
+            <div class="col-md-6">
+              <div class="servico-vet-card" style="--cor-topo:var(--azul-primario)">
+                <div class="servico-vet-topo"></div>
+                <div class="servico-vet-body">
+                  <i class="bi bi-shield-check servico-vet-icon"></i>
+                  <h4>Vacinas</h4>
+                  <p>Vacinação antirrábica e outras vacinas essenciais.</p>
+                  <button class="btn btn-primary-arca mt-2 w-100" onclick="abrirAgendamento('Vacinas')">Agendar</button>
+                </div>
+              </div>
+            </div>
+            <div class="col-md-6">
+              <div class="servico-vet-card" style="--cor-topo:#7c3aed">
+                <div class="servico-vet-topo"></div>
+                <div class="servico-vet-body">
+                  <i class="bi bi-bandaid servico-vet-icon"></i>
+                  <h4>Cirurgias</h4>
+                  <p>Procedimentos cirúrgicos indicados pela equipe veterinária.</p>
+                  <button class="btn btn-primary-arca mt-2 w-100" onclick="abrirAgendamento('Cirurgias')">Agendar</button>
+                </div>
+              </div>
+            </div>
+            <div class="col-md-6">
+              <div class="servico-vet-card" style="--cor-topo:#e07b39">
+                <div class="servico-vet-topo"></div>
+                <div class="servico-vet-body">
+                  <i class="bi bi-heart-pulse servico-vet-icon"></i>
+                  <h4>Atendimento de Rotina</h4>
+                  <p>Consulta geral, vermifugação e acompanhamento de saúde.</p>
+                  <button class="btn btn-primary-arca mt-2 w-100" onclick="abrirAgendamento('Atendimento de Rotina')">Agendar</button>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div id="form-agendamento-wrap" class="card-arca p-4" style="display:none;max-width:540px;">
+            <h5 class="secao-titulo mb-3" id="titulo-agendamento">Agendar Serviço</h5>
+            <form id="form-agendamento" novalidate>
+              <input type="hidden" id="agendamento-tipo">
+              <div class="mb-3">
+                <label for="ag-animal-id" class="form-label-arca">ID do Animal <span class="text-danger">*</span></label>
+                <input type="number" class="input-arca" id="ag-animal-id" placeholder="Número do ID" min="1" required>
+                <div class="campo-erro" id="erro-ag-animal"></div>
+              </div>
+              <div class="mb-3">
+                <label for="ag-data" class="form-label-arca">Data preferida <span class="text-danger">*</span></label>
+                <input type="date" class="input-arca" id="ag-data" required>
+                <div class="campo-erro" id="erro-ag-data"></div>
+              </div>
+              <div class="mb-3">
+                <label for="ag-obs" class="form-label-arca">Observações</label>
+                <textarea class="input-arca" id="ag-obs" rows="3" placeholder="Informações adicionais..."></textarea>
+              </div>
+              <div class="alerta-erro" id="alerta-ag-erro" style="display:none;"></div>
+              <div class="d-flex gap-2">
+                <button type="submit" class="btn btn-primary-arca flex-grow-1">
+                  <i class="bi bi-calendar-check me-2"></i>Confirmar
+                </button>
+                <button type="button" class="btn btn-outline-secondary" onclick="fecharAgendamento()">Cancelar</button>
+              </div>
+            </form>
+          </div>
+          <div id="ag-sucesso" class="text-center p-4 card-arca" style="display:none;max-width:480px;">
+            <div class="sucesso-icon"><i class="bi bi-calendar-check-fill"></i></div>
+            <h4 class="mt-3">Agendamento Confirmado!</h4>
+            <p class="texto-medio mt-2">Você receberá confirmação por SMS. Compareça na data agendada ao Centro de Zoonoses.</p>
+            <button class="btn btn-primary-arca mt-3" onclick="resetAgendamento()">Novo agendamento</button>
+          </div>
+        </div>
+
+        <!-- ===== DENÚNCIAS ===== -->
+        <div class="dash-page" id="page-denuncias" style="display:none;">
+          <div class="page-header">
+            <div>
+              <h2 class="page-titulo">Canal de Denúncia</h2>
+              <p class="page-sub">Denuncie maus-tratos, abandono ou negligência animal.</p>
+            </div>
+          </div>
+          <div class="alerta-info mb-4">
+            <i class="bi bi-shield-lock me-2"></i>
+            Todas as denúncias são tratadas com <strong>sigilo absoluto</strong>. Tel: <strong>(27) 3291-2900</strong>
+          </div>
+          <div class="card-arca p-4" style="max-width:600px;" id="form-denuncia-wrap">
+            <form id="form-denuncia" novalidate>
+              <div class="mb-3">
+                <label for="den-tipo" class="form-label-arca">Tipo de ocorrência <span class="text-danger">*</span></label>
+                <select class="input-arca" id="den-tipo" required>
+                  <option value="">Selecione</option>
+                  <option>Maus-tratos</option>
+                  <option>Abandono</option>
+                  <option>Negligência</option>
+                  <option>Comércio ilegal</option>
+                  <option>Outros</option>
+                </select>
+                <div class="campo-erro" id="erro-den-tipo"></div>
+              </div>
+              <div class="mb-3">
+                <label for="den-local" class="form-label-arca">Local da ocorrência <span class="text-danger">*</span></label>
+                <input type="text" class="input-arca" id="den-local" placeholder="Rua, número, bairro, referência..." required>
+                <div class="campo-erro" id="erro-den-local"></div>
+              </div>
+              <div class="mb-3">
+                <label for="den-descricao" class="form-label-arca">Descrição detalhada <span class="text-danger">*</span></label>
+                <textarea class="input-arca" id="den-descricao" rows="5" style="min-height:120px;"
+                          placeholder="Descreva o ocorrido com o máximo de detalhes..." required></textarea>
+                <div class="campo-erro" id="erro-den-desc"></div>
+              </div>
+              <div class="mb-3 d-flex align-items-center gap-2">
+                <input type="checkbox" class="form-check-input check-arca" id="den-anonima">
+                <label for="den-anonima" class="form-label-arca mb-0" style="cursor:pointer;">
+                  Denúncia anônima (seu nome não será vinculado)
+                </label>
+              </div>
+              <div class="alerta-erro" id="alerta-den-erro" style="display:none;"></div>
+              <button type="submit" class="btn btn-primary-arca w-100 py-2">
+                <i class="bi bi-send me-2"></i>Enviar Denúncia
+              </button>
+            </form>
+          </div>
+          <div id="den-sucesso" class="text-center p-5 card-arca mt-3" style="display:none;max-width:500px;">
+            <div class="sucesso-icon" style="color:var(--azul-primario)"><i class="bi bi-clipboard-check-fill"></i></div>
+            <h4 class="mt-3">Denúncia Registrada!</h4>
+            <div class="protocolo-badge mt-2" id="protocolo-denuncia">#DEN-000</div>
+            <p class="texto-medio mt-2">Sua denúncia foi encaminhada à fiscalização e será apurada com sigilo.</p>
+            <button class="btn btn-primary-arca mt-3" onclick="resetDenuncia()">Nova denúncia</button>
+          </div>
+        </div>
+
+        <!-- ===== RESGATE ===== -->
+        <div class="dash-page" id="page-resgate" style="display:none;">
+          <div class="page-header">
+            <div>
+              <h2 class="page-titulo">Solicitação de Resgate</h2>
+              <p class="page-sub">Solicite o resgate de animais em situação de risco.</p>
+            </div>
+          </div>
+          <div class="alerta-laranja mb-4">
+            <i class="bi bi-exclamation-octagon-fill me-2"></i>
+            <strong>Emergência?</strong> Ligue imediatamente: <strong>(27) 3291-2900</strong>
+          </div>
+          <div class="card-arca p-4" style="max-width:600px;" id="form-resgate-wrap">
+            <form id="form-resgate" novalidate>
+              <div class="mb-3">
+                <label for="res-tipo" class="form-label-arca">Tipo de situação <span class="text-danger">*</span></label>
+                <select class="input-arca" id="res-tipo" required>
+                  <option value="">Selecione</option>
+                  <option>Atropelamento</option>
+                  <option>Animal ferido</option>
+                  <option>Animal abandonado</option>
+                  <option>Maus-tratos</option>
+                  <option>Outros</option>
+                </select>
+                <div class="campo-erro" id="erro-res-tipo"></div>
+              </div>
+              <div class="mb-3">
+                <label for="res-localizacao" class="form-label-arca">Localização <span class="text-danger">*</span></label>
+                <input type="text" class="input-arca" id="res-localizacao" placeholder="Rua, número, ponto de referência..." required>
+                <div class="campo-erro" id="erro-res-loc"></div>
+              </div>
+              <div class="mb-3">
+                <label for="res-bairro" class="form-label-arca">Bairro <span class="text-danger">*</span></label>
+                <input type="text" class="input-arca" id="res-bairro" placeholder="Nome do bairro" required>
+                <div class="campo-erro" id="erro-res-bairro"></div>
+              </div>
+              <div class="mb-3">
+                <label for="res-risco" class="form-label-arca">Nível de risco <span class="text-danger">*</span></label>
+                <select class="input-arca" id="res-risco" required>
+                  <option value="">Selecione</option>
+                  <option>Baixo</option>
+                  <option>Moderado</option>
+                  <option>Alto</option>
+                  <option>Crítico</option>
+                </select>
+                <div class="campo-erro" id="erro-res-risco"></div>
+              </div>
+              <div class="mb-3">
+                <label for="res-descricao" class="form-label-arca">Descrição <span class="text-danger">*</span></label>
+                <textarea class="input-arca" id="res-descricao" rows="4" style="min-height:120px;"
+                          placeholder="Descreva a situação em detalhes..." required></textarea>
+                <div class="campo-erro" id="erro-res-desc"></div>
+              </div>
+              <div class="alerta-erro" id="alerta-res-erro" style="display:none;"></div>
+              <button type="submit" class="btn btn-primary-arca w-100 py-2">
+                <i class="bi bi-send me-2"></i>Solicitar Resgate
+              </button>
+            </form>
+          </div>
+          <div id="res-sucesso" class="text-center p-5 card-arca mt-3" style="display:none;max-width:500px;">
+            <div class="sucesso-icon" style="color:#e07b39"><i class="bi bi-truck"></i></div>
+            <h4 class="mt-3">Resgate Solicitado!</h4>
+            <div class="protocolo-badge mt-2" id="protocolo-resgate">#RSG-000</div>
+            <p class="texto-medio mt-2">Nossa equipe foi acionada e entrará em contato em breve.</p>
+            <button class="btn btn-primary-arca mt-3" onclick="resetResgate()">Nova solicitação</button>
+          </div>
+        </div>
+
+        <!-- ===== HISTÓRICO ===== -->
+        <div class="dash-page" id="page-historico" style="display:none;">
+          <div class="page-header">
+            <div>
+              <h2 class="page-titulo">Histórico de Atividades</h2>
+              <p class="page-sub">Todas as suas solicitações e atividades no Programa ARCA.</p>
+            </div>
+          </div>
+          <div id="lista-historico"></div>
+        </div>
+
+        <!-- ===== AJUDA ===== -->
+        <div class="dash-page" id="page-ajuda" style="display:none;">
+          <div class="page-header">
+            <div>
+              <h2 class="page-titulo">Ajuda & FAQ</h2>
+              <p class="page-sub">Perguntas frequentes sobre o Programa ARCA.</p>
+            </div>
+          </div>
+          <div class="accordion accordion-arca mb-4" id="faqAccordion">
+            <div class="accordion-item-arca">
+              <button class="accordion-btn-arca collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#faq1">
+                <i class="bi bi-question-circle me-2"></i>Como funciona o processo de adoção?
+              </button>
+              <div id="faq1" class="collapse" data-bs-parent="#faqAccordion">
+                <div class="accordion-body-arca">Acesse a seção "Adoção", escolha o animal e clique em "Quero adotar". Preencha o formulário de três etapas. Nossa equipe entrará em contato em até 5 dias úteis para agendar entrevista e visita domiciliar.</div>
+              </div>
+            </div>
+            <div class="accordion-item-arca">
+              <button class="accordion-btn-arca collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#faq2">
+                <i class="bi bi-question-circle me-2"></i>Os serviços veterinários são gratuitos?
+              </button>
+              <div id="faq2" class="collapse" data-bs-parent="#faqAccordion">
+                <div class="accordion-body-arca">Sim! Todos os serviços do Programa ARCA são 100% gratuitos para moradores de Serra — ES, incluindo castração, vacinas, cirurgias e atendimento de rotina.</div>
+              </div>
+            </div>
+            <div class="accordion-item-arca">
+              <button class="accordion-btn-arca collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#faq3">
+                <i class="bi bi-question-circle me-2"></i>Como acompanhar minha solicitação de resgate?
+              </button>
+              <div id="faq3" class="collapse" data-bs-parent="#faqAccordion">
+                <div class="accordion-body-arca">Após o envio você recebe um protocolo (ex: #RSG-123456). Entre em contato pelo (27) 3291-2900 informando o número para acompanhar o andamento.</div>
+              </div>
+            </div>
+            <div class="accordion-item-arca">
+              <button class="accordion-btn-arca collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#faq4">
+                <i class="bi bi-question-circle me-2"></i>Minha denúncia é realmente anônima?
+              </button>
+              <div id="faq4" class="collapse" data-bs-parent="#faqAccordion">
+                <div class="accordion-body-arca">Sim. Ao marcar "Denúncia anônima", seus dados não são vinculados ao processo. Todas as denúncias têm sigilo absoluto garantido pela equipe de fiscalização.</div>
+              </div>
+            </div>
+            <div class="accordion-item-arca">
+              <button class="accordion-btn-arca collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#faq5">
+                <i class="bi bi-question-circle me-2"></i>Preciso do ID do animal para usar os serviços?
+              </button>
+              <div id="faq5" class="collapse" data-bs-parent="#faqAccordion">
+                <div class="accordion-body-arca">Para agendamentos veterinários é necessário o ID do animal cadastrado. Acesse "Cadastrar Animal" para registrar antes de agendar.</div>
+              </div>
+            </div>
+            <div class="accordion-item-arca">
+              <button class="accordion-btn-arca collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#faq6">
+                <i class="bi bi-question-circle me-2"></i>Por que meu animal não aparece na lista de adoção?
+              </button>
+              <div id="faq6" class="collapse" data-bs-parent="#faqAccordion">
+                <div class="accordion-body-arca">Animais recém-cadastrados ficam com status "Cadastrado" e não aparecem na listagem. A equipe ARCA analisa e, quando aprovado, o animal recebe status "Disponível".</div>
+              </div>
+            </div>
+          </div>
+          <div class="card-arca p-4" style="max-width:400px;">
+            <h5 class="secao-titulo mb-3"><i class="bi bi-headset me-2"></i>Ainda precisa de ajuda?</h5>
+            <div class="d-flex flex-column gap-2 texto-medio">
+              <div><i class="bi bi-telephone me-2" style="color:var(--azul-primario)"></i><strong>(27) 3291-2900</strong></div>
+              <div><i class="bi bi-envelope me-2" style="color:var(--azul-primario)"></i>arca@serra.es.gov.br</div>
+              <div><i class="bi bi-clock me-2" style="color:var(--azul-primario)"></i>Segunda a sexta, 8h às 17h</div>
+            </div>
+          </div>
+        </div>
+
+        <!-- ===== PERFIL ===== -->
+        <div class="dash-page" id="page-perfil" style="display:none;">
+          <div class="page-header">
+            <div>
+              <h2 class="page-titulo">Perfil & Configurações</h2>
+              <p class="page-sub">Gerencie suas informações pessoais.</p>
+            </div>
+          </div>
+          <div class="row g-4">
+            <div class="col-md-4">
+              <div class="card-arca p-4 text-center">
+                <div class="perfil-avatar" id="perfil-avatar-grande">U</div>
+                <h4 class="mt-3" id="perfil-nome-display">Usuário</h4>
+                <span class="badge-cargo" id="perfil-cargo-display">Cidadão</span>
+                <hr class="my-3">
+                <div class="text-start d-flex flex-column gap-2 small texto-medio">
+                  <div><i class="bi bi-person me-2" style="color:var(--azul-primario)"></i><span id="p-cpf">—</span></div>
+                  <div><i class="bi bi-envelope me-2" style="color:var(--azul-primario)"></i><span id="p-email">—</span></div>
+                  <div><i class="bi bi-geo-alt me-2" style="color:var(--azul-primario)"></i><span id="p-endereco">—</span></div>
+                </div>
+              </div>
+            </div>
+            <div class="col-md-8">
+              <div class="card-arca p-4">
+                <h5 class="secao-titulo mb-3">Alterar dados</h5>
+                <form id="form-perfil" novalidate>
+                  <div class="row g-3">
+                    <div class="col-md-6">
+                      <label for="perf-nome" class="form-label-arca">Nome completo</label>
+                      <input type="text" class="input-arca" id="perf-nome" placeholder="Seu nome">
+                    </div>
+                    <div class="col-md-6">
+                      <label for="perf-email" class="form-label-arca">E-mail</label>
+                      <input type="email" class="input-arca" id="perf-email" placeholder="email@email.com">
+                    </div>
+                    <div class="col-md-6">
+                      <label for="perf-senha" class="form-label-arca">Nova senha</label>
+                      <div class="input-group-arca">
+                        <i class="bi bi-lock input-icon"></i>
+                        <input type="password" class="input-arca" id="perf-senha" placeholder="Mínimo 6 caracteres">
+                        <button type="button" class="btn-toggle-senha" onclick="toggleSenha('perf-senha',this)" aria-label="Mostrar senha"><i class="bi bi-eye"></i></button>
+                      </div>
+                    </div>
+                    <div class="col-md-6">
+                      <label for="perf-senha2" class="form-label-arca">Confirmar nova senha</label>
+                      <div class="input-group-arca">
+                        <i class="bi bi-lock input-icon"></i>
+                        <input type="password" class="input-arca" id="perf-senha2" placeholder="Repita a senha">
+                        <button type="button" class="btn-toggle-senha" onclick="toggleSenha('perf-senha2',this)" aria-label="Mostrar senha"><i class="bi bi-eye"></i></button>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="alerta-erro mt-3" id="alerta-perf-erro" style="display:none;"></div>
+                  <div class="alerta-verde mt-3" id="alerta-perf-sucesso" style="display:none;">
+                    <i class="bi bi-check-circle me-2"></i>Dados salvos com sucesso!
+                  </div>
+                  <button type="submit" class="btn btn-primary-arca mt-3">
+                    <i class="bi bi-check2-circle me-2"></i>Salvar alterações
+                  </button>
+                </form>
+              </div>
+            </div>
+          </div>
+        </div>
+
+      </main>
+    </div>
+  </div>
+</div><!-- /dashboard -->
+
+
+<!-- Modal Adoção 3 etapas -->
+<div class="modal fade" id="modalAdocao" tabindex="-1" aria-labelledby="lblAdocao" aria-modal="true" role="dialog">
+  <div class="modal-dialog modal-dialog-centered">
+    <div class="modal-content modal-arca">
+      <div class="modal-body p-4 p-md-5">
+        <h4 id="lblAdocao" class="modal-titulo mb-3">Processo de Adoção</h4>
+        <div class="stepper mb-4">
+          <div class="step active" id="step-ind-1">1</div>
+          <div class="step-line"></div>
+          <div class="step" id="step-ind-2">2</div>
+          <div class="step-line"></div>
+          <div class="step" id="step-ind-3">3</div>
+        </div>
+        <div id="adocao-etapa1">
+          <h5 class="mb-3">Informações do Animal</h5>
+          <div id="adocao-animal-info" class="card-arca p-3 mb-3"></div>
+          <button class="btn btn-primary-arca w-100" onclick="adocaoProxima(2)">
+            Continuar <i class="bi bi-arrow-right ms-2"></i>
+          </button>
+        </div>
+        <div id="adocao-etapa2" style="display:none;">
+          <h5 class="mb-3">Motivação</h5>
+          <label for="adocao-motivacao" class="form-label-arca">Por que quer adotar? (opcional)</label>
+          <textarea class="input-arca" id="adocao-motivacao" rows="4" placeholder="Conte um pouco sobre você e como pretende cuidar..."></textarea>
+          <div class="d-flex gap-2 mt-3">
+            <button class="btn btn-outline-secondary" onclick="adocaoAnterior(1)"><i class="bi bi-arrow-left me-1"></i>Voltar</button>
+            <button class="btn btn-primary-arca flex-grow-1" onclick="adocaoProxima(3)">Continuar <i class="bi bi-arrow-right ms-2"></i></button>
+          </div>
+        </div>
+        <div id="adocao-etapa3" style="display:none;">
+          <h5 class="mb-3">Confirmação</h5>
+          <div class="alerta-info mb-3">
+            <i class="bi bi-info-circle me-2"></i>
+            Nossa equipe entrará em contato em até <strong>5 dias úteis</strong>.
+          </div>
+          <div class="mb-3 d-flex align-items-start gap-2">
+            <input type="checkbox" class="form-check-input check-arca mt-1" id="adocao-termos">
+            <label for="adocao-termos" style="cursor:pointer;">Li e concordo com os <a href="#" class="link-arca">Termos de Adoção</a> do Programa ARCA.</label>
+          </div>
+          <div class="alerta-erro mb-2" id="adocao-erro" style="display:none;">
+            <i class="bi bi-exclamation-circle me-2"></i>Aceite os termos para continuar.
+          </div>
+          <div class="d-flex gap-2">
+            <button class="btn btn-outline-secondary" onclick="adocaoAnterior(2)"><i class="bi bi-arrow-left me-1"></i>Voltar</button>
+            <button class="btn btn-primary-arca flex-grow-1" onclick="confirmarAdocao()">
+              <i class="bi bi-heart-fill me-2"></i>Confirmar Adoção
+            </button>
+          </div>
+        </div>
+        <div id="adocao-sucesso" class="text-center" style="display:none;">
+          <div class="sucesso-icon" style="color:var(--verde-arca)"><i class="bi bi-balloon-heart-fill"></i></div>
+          <h4 class="mt-3">Solicitação Enviada!</h4>
+          <div class="protocolo-badge mt-2" id="protocolo-adocao">#ADO-000</div>
+          <p class="texto-medio mt-2">Nossa equipe entrará em contato em até 5 dias úteis.</p>
+          <button class="btn btn-primary-arca mt-3" data-bs-dismiss="modal">Fechar</button>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+<script src="script.js"></script>
+</body>
+</html>
